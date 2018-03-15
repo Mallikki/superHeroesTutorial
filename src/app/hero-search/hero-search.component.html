@@ -1,0 +1,18 @@
+<div id="search-component">
+  <h4>Hero Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
+  <!-- Event binding
+  every time the user types in the textbox, the binding calls search() with the textbos value, the search term. The searchTerms
+  becomes on observable emitting search terms. -->
+
+  <ul class="search-result">
+    <li *ngFor="let hero of heroes$ | async">
+      <a routerLink="detail/{{hero.id}}">
+      {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- heroes$ : le $ aprés heroes est une convention pour indiquer que heroes$ est un observable, pas une array
+ngFor ne peut pas tout faire avec un observable. C'est pourquoi on utilise AsyncPipe, qui va subscribe
+a un observable automatiquement, pour ne pas avoir à le faire dans le component -->
