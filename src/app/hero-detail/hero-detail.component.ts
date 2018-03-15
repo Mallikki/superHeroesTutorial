@@ -25,16 +25,23 @@ export class HeroDetailComponent implements OnInit {
 
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
+    //we retrieve the hero's id set in the route
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+    //then, the service is called to use the getHero method with the retrieved id
+    // to obtain a hero's detail
   }
 
   goBack(): void {
     this.location.back();
+    //we go back to the previous "page"
   }
 
   save(): void {
     this.heroService.updateHero(this.hero)
       .subscribe(() => this.goBack());
+    //we call the updateHero method from the service and pass it the which detail we are retrieving hero.
+    // we can update its name
+    // then, we go back to the previous "page"
   }
 }

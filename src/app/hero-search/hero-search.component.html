@@ -2,7 +2,7 @@
   <h4>Hero Search</h4>
   <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
   <!-- Event binding
-  every time the user types in the textbox, the binding calls search() with the textbos value, the search term. The searchTerms
+  every time the user types in the textbox, the binding calls search() with the textbox value, the search term. The searchTerms
   becomes on observable emitting search terms. -->
 
   <ul class="search-result">
@@ -13,6 +13,7 @@
     </li>
   </ul>
 </div>
-<!-- heroes$ : le $ aprés heroes est une convention pour indiquer que heroes$ est un observable, pas une array
-ngFor ne peut pas tout faire avec un observable. C'est pourquoi on utilise AsyncPipe, qui va subscribe
-a un observable automatiquement, pour ne pas avoir à le faire dans le component -->
+<!--  the $ after heroes is a convention to indicate that it is an observable, not an array.
+NgFor cannot do anything with an observable. That's why we use an AsyncPipe, which will subscribe automatically to
+an observable, so it won't have to do it in the component-->
+

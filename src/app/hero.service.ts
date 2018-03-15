@@ -29,6 +29,9 @@ export class HeroService {
         catchError(this.handleError('getHeroes', []))
       );
   }
+  /*
+      read about the pipeble operators
+   */
 
   /** GET hero by id. Return `undefined` when id not found */
   getHeroNo404<Data>(id: number): Observable<Hero> {
@@ -74,6 +77,7 @@ export class HeroService {
       catchError(this.handleError<Hero>('addHero'))
     );
   }
+  //http.post(url, body, options). The body can be null.
 
   /** DELETE: delete the hero from the server */
   deleteHero (hero: Hero | number): Observable<Hero> {

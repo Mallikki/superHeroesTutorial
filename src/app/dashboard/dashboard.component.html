@@ -1,5 +1,7 @@
 <h3>Top Heroes</h3>
 <div class="grid grid-pad">
+  <!-- ngFor : boucle. For each hero, we will display its name and a new
+  router link /detail/id will be assigned to it.-->
   <a *ngFor="let hero of heroes" class="col-1-4" routerLink="/detail/{{hero.id}}">
     <div class="module hero">
       <h4>{{hero.name}}</h4>
@@ -8,3 +10,4 @@
 </div>
 
 <app-hero-search></app-hero-search>
+<!-- search hero component -->

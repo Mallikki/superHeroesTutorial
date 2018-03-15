@@ -1,5 +1,6 @@
 import { Hero } from "./hero";
 
+//can be deleted. Previous list of all superheroes
 export const HEROES: Hero[] = [
   { id:11, name: "MegaMan"},
   { id:12, name: "SuperMan"},

@@ -17,6 +17,9 @@ import { HeroService }          from './hero.service';
 import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
 
+/*
+will do all the imports of module and declare all services and components
+ */
 @NgModule({
   imports: [
     BrowserModule,
